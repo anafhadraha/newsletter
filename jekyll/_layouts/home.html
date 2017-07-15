@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/css/bundle.min.css">
+  <title>{{ title }}</title>
+</head>
+
+<body class="page">
+
+  <header class="header">
+
+    <div class="header-container__logo">
+      <img src="./dist/img/logo-hadraha.png" class="header__logo" alt="לוגו ענף הדרכה">
+      <img src="./dist/img/logo-kh.png" class="header__logo" alt="לוגו קריית ההדרכה">
+    </div>
+
+    <section class="header-container__content">
+      <h1 class="header__title">{{ title }}</h1>
+      <h2 class="header__sub-title">רבעון ב' - 2017</h2>
+
+      <p class="header__paragraph">
+        מפקדים וחיילים יקרים, אני מתכבד להציג בפניכם בניוזלטר זה את עיקרי העשייה של ענף הדרכה בקריית ההדרכה. שנת 2017 התאפיינה עד
+      </p>
+    </section>
+
+  </header>
+
+  <main class="articles">
+
+{% for post in site.posts %}
+  <article class="article">
+      <figure class="article-container__image">
+        <img src="./dist/img/{{ post.img }}" class="article__image" alt="תמונה מדור רובאות">
+      </figure>
+      <section class="article__content">
+        <h2 class="article__title">{{ post.title }}</h2>
+
+        <p class="article__paragraph">
+          {{ post.content | remove: '<p>' | remove: '</p>'}}
+        </p>
+      </section>
+    </article>
+{% endfor %}
+
+
+    <!-- <article class="article">
+      <figure class="article-container__image">
+        <img src="./dist/img/article-rovaut-1.jpg" class="article__image" alt="תמונה מדור רובאות">
+      </figure>
+
+      <section class="article__content">
+        <h2 class="article__title">הובלת עמ"ט הטב"ס</h2>
+
+        <p class="article__paragraph">
+          עמ"ט הטב"ס הינה עבודת מטה המשפיעה על הכשרת הטירונות בכלל צה"ל. מטרת העמ"ט הינה להתאים את תפיסת הטירונות והכשרות היסוד במערך
+          תומכי הלחימה לשם שיפור רציפות ועכשוויות ההכשרה בראי קיצור השירות בצה"ל. חלק מתוצרי העמ"ט הינן; קיצור משך הטירונות,
+          יצירת רצף בין הטירונות והכשרות היסוד הארוכות, טיוב תהליכים וקיצור משך הכשרות היסוד. מימוש העמ"ט ימשיך ללוות אותנו
+          גם בחציון ב' 2017.
+        </p>
+      </section>
+    </article> -->
+
+  </main>
+</body>
+
+</html>
