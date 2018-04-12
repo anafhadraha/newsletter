@@ -116,6 +116,11 @@ ul {
   padding: 1em;
   color: #EEECEC; }
 
+.listPlaces {
+  list-style-type: circle;
+  padding: 1em;
+  color: #EEECEC; }
+
 .link {
   color: #EEECEC; }
   .link:hover {
